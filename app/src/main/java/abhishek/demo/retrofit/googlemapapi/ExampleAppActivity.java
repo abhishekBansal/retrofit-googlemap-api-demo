@@ -1,4 +1,4 @@
-package com.moldedbits.android;
+package abhishek.demo.retrofit.googlemapapi;
 
 import android.os.Bundle;
 

@@ -1,9 +1,9 @@
-package com.moldedbits.android.utils;
+package abhishek.demo.retrofit.googlemapapi.utils;
 
 import android.content.Context;
 import android.content.SharedPreferences;
 
-import com.moldedbits.android.BaseApplication;
+import abhishek.demo.retrofit.googlemapapi.BaseApplication;
 
 /**
  * Created by abhishek

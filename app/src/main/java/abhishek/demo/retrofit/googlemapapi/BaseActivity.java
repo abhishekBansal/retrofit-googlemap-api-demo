@@ -1,4 +1,4 @@
-package com.moldedbits.android;
+package abhishek.demo.retrofit.googlemapapi;
 
 import android.os.Bundle;
 import android.os.Message;
@@ -6,9 +6,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.widget.FrameLayout;
 
-import com.moldedbits.android.api.ApiService;
-import com.moldedbits.android.dialogs.LoadingDialog;
-import com.moldedbits.android.utils.fragmenttransactionhandler.FragmentTransactionHandler;
+import abhishek.demo.retrofit.googlemapapi.api.ApiService;
+import abhishek.demo.retrofit.googlemapapi.dialogs.LoadingDialog;
+import abhishek.demo.retrofit.googlemapapi.utils.fragmenttransactionhandler.FragmentTransactionHandler;
 
 import javax.inject.Inject;
 
@@ -19,9 +19,6 @@ import javax.inject.Inject;
  */
 public abstract class BaseActivity extends AppCompatActivity {
 
-    @Inject
-    ApiService apiService;
-
     private FrameLayout contentFrame;
     protected FragmentTransactionHandler handler;
 
@@ -30,9 +27,7 @@ public abstract class BaseActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         super.setContentView(R.layout.activity_base);
 
-        BaseApplication.getInstance().getApiComponent().inject(this);
-
-        contentFrame = (FrameLayout) findViewById(R.id.base_container);
+        contentFrame = findViewById(R.id.base_container);
         handler = new FragmentTransactionHandler();
     }
 

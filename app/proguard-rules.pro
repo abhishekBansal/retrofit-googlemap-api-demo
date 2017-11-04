@@ -29,7 +29,7 @@
 }
 
 ## Models
--keepclassmembers class com.moldedbits.android.model.** { *; }
+-keepclassmembers class abhishek.demo.retrofit.googlemapapi.model.** { *; }
 
 ##Design library
 -dontwarn android.support.design.**

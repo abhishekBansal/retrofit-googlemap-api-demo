@@ -1,4 +1,4 @@
-package com.moldedbits.android.api;
+package abhishek.demo.retrofit.googlemapapi.api;
 
 /**
  * Created by abhishek

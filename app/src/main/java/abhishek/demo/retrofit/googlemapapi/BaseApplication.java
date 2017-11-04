@@ -1,4 +1,4 @@
-package com.moldedbits.android;
+package abhishek.demo.retrofit.googlemapapi;
 
 import android.app.Application;
 
@@ -13,9 +13,6 @@ public class BaseApplication extends Application {
 
     private static BaseApplication instance;
 
-    @Getter
-    protected ApiComponent apiComponent;
-
     @Override
     public void onCreate() {
         super.onCreate();
@@ -24,8 +21,6 @@ public class BaseApplication extends Application {
         if (BuildConfig.DEBUG) {
             Timber.plant(new Timber.DebugTree());
         }
-
-        apiComponent = DaggerApiComponent.create();
     }
 
     public static BaseApplication getInstance() {

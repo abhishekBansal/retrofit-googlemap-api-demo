@@ -1,9 +1,9 @@
-package com.moldedbits.android.utils.fragmenttransactionhandler;
+package abhishek.demo.retrofit.googlemapapi.utils.fragmenttransactionhandler;
 
 import android.os.Message;
 import android.support.v4.app.FragmentActivity;
 
-import com.moldedbits.android.dialogs.ThemedInfoDialog;
+import abhishek.demo.retrofit.googlemapapi.dialogs.ThemedInfoDialog;
 
 public class FragmentTransactionHandler extends PauseHandler {
 

@@ -1,11 +1,11 @@
-package com.moldedbits.android;
+package abhishek.demo.retrofit.googlemapapi;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.View;
 
-import com.moldedbits.android.dialogs.LoadingDialog;
-import com.moldedbits.android.utils.fragmenttransactionhandler.FragmentTransactionHandler;
+import abhishek.demo.retrofit.googlemapapi.dialogs.LoadingDialog;
+import abhishek.demo.retrofit.googlemapapi.utils.fragmenttransactionhandler.FragmentTransactionHandler;
 
 public abstract class BaseFragment extends Fragment {
 

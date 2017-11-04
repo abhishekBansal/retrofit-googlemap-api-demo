@@ -1,4 +1,4 @@
-package com.moldedbits.android.dialogs;
+package abhishek.demo.retrofit.googlemapapi.dialogs;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -10,7 +10,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.moldedbits.android.R;
+import abhishek.demo.retrofit.googlemapapi.R;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;

@@ -1,39 +1,49 @@
-package com.moldedbits.android.api;
+package abhishek.demo.retrofit.googlemapapi.api;
 
 import com.google.gson.FieldNamingPolicy;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.moldedbits.android.BuildConfig;
 
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
-import javax.inject.Singleton;
 import javax.net.ssl.HostnameVerifier;
 import javax.net.ssl.SSLSession;
 
-import dagger.Module;
-import dagger.Provides;
-import io.reactivex.schedulers.Schedulers;
+import abhishek.demo.retrofit.googlemapapi.BuildConfig;
+import lombok.Getter;
 import okhttp3.Interceptor;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
 import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Retrofit;
-import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 /**
  * Created by abhishek
  * on 05/04/16.
  */
-@Module
 public class ApiModule {
 
-    @Provides
-    @Singleton
-    ApiService providesApiService() {
+    @Getter
+    private ApiService apiService;
+
+    private ApiModule() {
+        init();
+    }
+
+    private static ApiModule apiModule;
+
+    public static ApiModule getInstance() {
+        if(apiModule == null) {
+            apiModule = new ApiModule();
+        }
+
+        return apiModule;
+    }
+
+    private void init() {
         OkHttpClient.Builder builder = new OkHttpClient.Builder();
         // TODO: 08/04/16 might want to remove this in prod
         builder.hostnameVerifier(new HostnameVerifier() {
@@ -72,16 +82,12 @@ public class ApiModule {
                 .setDateFormat("yyyy-MM-dd")
                 .create();
 
-        RxJava2CallAdapterFactory rxAdapter = RxJava2CallAdapterFactory
-                .createWithScheduler(Schedulers.io());
-
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(BuildConfig.API_URL)
                 .client(builder.build())
                 .addConverterFactory(GsonConverterFactory.create(gson))
-                .addCallAdapterFactory(rxAdapter)
                 .build();
 
-        return retrofit.create(ApiService.class);
+        apiService =  retrofit.create(ApiService.class);
     }
 }

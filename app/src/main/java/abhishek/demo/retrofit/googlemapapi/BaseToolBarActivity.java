@@ -1,4 +1,4 @@
-package com.moldedbits.android;
+package abhishek.demo.retrofit.googlemapapi;
 
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
