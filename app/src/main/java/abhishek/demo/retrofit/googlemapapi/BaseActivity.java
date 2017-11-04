@@ -6,12 +6,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.widget.FrameLayout;
 
-import abhishek.demo.retrofit.googlemapapi.api.ApiService;
 import abhishek.demo.retrofit.googlemapapi.dialogs.LoadingDialog;
 import abhishek.demo.retrofit.googlemapapi.utils.fragmenttransactionhandler.FragmentTransactionHandler;
-
-import javax.inject.Inject;
-
 
 /**
  * Created by shishank

@@ -14,7 +14,7 @@ android {
     compileSdkVersion 26
     buildToolsVersion '26.0.2'
 
-    final API_URL_DEV = "https://www.google.com/";
+    final API_URL_DEV = "http://maps.googleapis.com/maps/api/"
 
     defaultConfig {
         applicationId "abhishek.demo.retrofit.googlemapapi"
